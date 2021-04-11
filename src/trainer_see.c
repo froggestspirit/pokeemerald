@@ -21,7 +21,7 @@
 #include "constants/trainer_types.h"
 
 extern const struct SpritePalette sObjectEventSpritePalettes[];
-extern const struct SpritePalette gObjectEventPalette0;
+extern const struct SpritePalette gObjectEventPal_Npc1;
 
 // this file's functions
 static u8 CheckTrainer(u8 objectEventId);
@@ -733,7 +733,7 @@ u8 FldEff_HeartIcon(void)
 {
     u8 spriteId;
 
-    LoadSpritePalette(&gObjectEventPalette0);
+    LoadSpritePalette(&gObjectEventPal_Npc1);
     UpdatePaletteGammaType(IndexOfSpritePaletteTag(0x1004), GAMMA_ALT);
     UpdateSpritePaletteWithWeather(IndexOfSpritePaletteTag(0x1004));
     spriteId = CreateSpriteAtEnd(&sSpriteTemplate_HeartIcon, 0, 0, 0x52);
