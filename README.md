@@ -14,6 +14,11 @@ It builds the following ROM:
 To set up the repository, see [INSTALL.md](INSTALL.md).
 
 
+This branch is a combination of the Dynamic overworld palettes from https://github.com/Demonheadge/pokeemerald/commit/8c67c3d57373f598b275040761f9d20d95213be1#
+
+And Sierraffinity's Day/Night branch
+
+
 ## See also
 
 Other disassembly and/or decompilation projects:
