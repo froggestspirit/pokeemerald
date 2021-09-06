@@ -187,9 +187,9 @@ static const struct Sprite sDummySprite =
     .template = &gDummySpriteTemplate,
     .subspriteTables = NULL,
     .callback = SpriteCallbackDummy,
-    .pos1 = { 304, 160 },
-    .pos2 = {   0,   0 },
-    .pos3 = {   0,   0 },
+    .x = 304, .y = 160,
+    .x2 =  0, .y2 =  0,
+    .x3 =  0, .y3 =  0,
     .centerToCornerVecX = 0,
     .centerToCornerVecY = 0,
     .animNum = 0,
@@ -405,18 +405,18 @@ void UpdateOamCoords(void)
             s32 rotSinX = -gOamMatrices[sprite->oam.matrixNum].b * xScale * xScale;
             s32 rotSinY = -gOamMatrices[sprite->oam.matrixNum].c * yScale * yScale;
             s32 rotCosY = gOamMatrices[sprite->oam.matrixNum].d * yScale * yScale;
-            if(xScale < 0 ^ yScale < 0){
+            if ((xScale < 0) ^ (yScale < 0)){
                 rotSinX = -rotSinX;
                 rotSinY = -rotSinY;
             }
             if (sprite->oam.affineMode & ST_OAM_AFFINE_ON_MASK){
-                sprite->pos3.x = ((rotCosX * x1) + (rotSinX * y1)) >> 24;
-                sprite->pos3.y = ((rotSinY * x1) + (rotCosY * y1)) >> 24;
+                sprite->x3 = ((rotCosX * x1) + (rotSinX * y1)) >> 24;
+                sprite->y3 = ((rotSinY * x1) + (rotCosY * y1)) >> 24;
             }else{
-                sprite->pos3.x = x1;
-                if(sprite->oam.matrixNum & ST_OAM_HFLIP) sprite->pos3.x = -x1;
-                sprite->pos3.y = y1;
-                if(sprite->oam.matrixNum & ST_OAM_VFLIP) sprite->pos3.y = -y1;
+                sprite->x3 = x1;
+                if(sprite->oam.matrixNum & ST_OAM_HFLIP) sprite->x3 = -x1;
+                sprite->y3 = y1;
+                if(sprite->oam.matrixNum & ST_OAM_VFLIP) sprite->y3 = -y1;
             }
             for(ic = 0; ic < 4; ic++){
                 if(sprite->children[ic] != 0xFF){
@@ -436,18 +436,20 @@ void UpdateOamCoords(void)
                     childSprite->subpriority = sprite->subpriority;
                     childSprite->anims = sprite->anims;
                     childSprite->affineAnims = sprite->affineAnims;
-                    childSprite->pos1 = sprite->pos1;
-                    childSprite->pos2 = sprite->pos2;
+                    childSprite->x = sprite->x;
+                    childSprite->y = sprite->y;
+                    childSprite->x2 = sprite->x2;
+                    childSprite->y2 = sprite->y2;
                     x1 = (sOffsetVecTableChildren[ic + 1][0]);
                     y1 = (sOffsetVecTableChildren[ic + 1][1]);
                     if (sprite->oam.affineMode & ST_OAM_AFFINE_ON_MASK){
-                        childSprite->pos3.x = ((rotCosX * x1) + (rotSinX * y1)) >> 24;
-                        childSprite->pos3.y = ((rotSinY * x1) + (rotCosY * y1)) >> 24;
+                        childSprite->x3 = ((rotCosX * x1) + (rotSinX * y1)) >> 24;
+                        childSprite->y3 = ((rotSinY * x1) + (rotCosY * y1)) >> 24;
                     }else{
-                        childSprite->pos3.x = x1;
-                        if(childSprite->oam.matrixNum & ST_OAM_HFLIP) childSprite->pos3.x = -x1;
-                        childSprite->pos3.y = y1;
-                        if(childSprite->oam.matrixNum & ST_OAM_VFLIP) childSprite->pos3.y = -y1;
+                        childSprite->x3 = x1;
+                        if(childSprite->oam.matrixNum & ST_OAM_HFLIP) childSprite->x3 = -x1;
+                        childSprite->y3 = y1;
+                        if(childSprite->oam.matrixNum & ST_OAM_VFLIP) childSprite->y3 = -y1;
                     }
                 }
             }
@@ -459,13 +461,13 @@ void UpdateOamCoords(void)
         {
             if (sprite->coordOffsetEnabled)
             {
-                sprite->oam.x = sprite->pos1.x + sprite->pos2.x + sprite->pos3.x + sprite->centerToCornerVecX + gSpriteCoordOffsetX;
-                sprite->oam.y = sprite->pos1.y + sprite->pos2.y + sprite->pos3.y + sprite->centerToCornerVecY + gSpriteCoordOffsetY;
+                sprite->oam.x = sprite->x + sprite->x2 + sprite->x3 + sprite->centerToCornerVecX + gSpriteCoordOffsetX;
+                sprite->oam.y = sprite->y + sprite->y2 + sprite->y3 + sprite->centerToCornerVecY + gSpriteCoordOffsetY;
             }
             else
             {
-                sprite->oam.x = sprite->pos1.x + sprite->pos2.x + sprite->pos3.x + sprite->centerToCornerVecX;
-                sprite->oam.y = sprite->pos1.y + sprite->pos2.y + sprite->pos3.y + sprite->centerToCornerVecY;
+                sprite->oam.x = sprite->x + sprite->x2 + sprite->x3 + sprite->centerToCornerVecX;
+                sprite->oam.y = sprite->y + sprite->y2 + sprite->y3 + sprite->centerToCornerVecY;
             }
         }
     }
@@ -536,6 +538,10 @@ void SortSprites(void)
             // Although this doesn't result in a bug in the ROM,
             // the behavior is undefined.
             j--;
+#ifdef UBFIX
+            if (j == 0)
+                break;
+#endif
 
             sprite1 = &gSprites[sSpriteOrder[j - 1]];
             sprite2 = &gSprites[sSpriteOrder[j]];
@@ -709,8 +715,8 @@ u8 CreateSpriteAt(u8 index, const struct SpriteTemplate *template, s16 x, s16 y,
     sprite->affineAnims = template->affineAnims;
     sprite->template = template;
     sprite->callback = template->callback;
-    sprite->pos1.x = x;
-    sprite->pos1.y = y;
+    sprite->x = x;
+    sprite->y = y;
     sprite->parent = 0xFF;
     sprite->children[0] = 0xFF;
     sprite->children[1] = 0xFF;
@@ -766,8 +772,8 @@ u8 CreateSpriteRevAt(u8 index, const struct SpriteTemplate *template, s16 x, s16
     sprite->affineAnims = template->affineAnims;
     sprite->template = template;
     sprite->callback = template->callback;
-    sprite->pos1.x = x;
-    sprite->pos1.y = y;
+    sprite->x = x;
+    sprite->y = y;
     sprite->parent = 0xFF;
     sprite->children[0] = 0xFF;
     sprite->children[1] = 0xFF;
@@ -857,11 +863,11 @@ u8 CreateBigSpriteAt(u8 index, const struct SpriteTemplate *template, s16 x, s16
     spriteE->template = template;
     spriteE->callback = SpriteCallbackDummy;
 
-    spriteA->pos1.x = x;
-    spriteA->pos1.y = y;
+    spriteA->x = x;
+    spriteA->y = y;
     for(ic = 0; ic < 4; ic++){
-        gSprites[index + ic + 1].pos1.x = x + sOffsetVecTableChildren[ic + 1][0];
-        gSprites[index + ic + 1].pos1.y = y + sOffsetVecTableChildren[ic + 1][1];
+        gSprites[index + ic + 1].x = x + sOffsetVecTableChildren[ic + 1][0];
+        gSprites[index + ic + 1].y = y + sOffsetVecTableChildren[ic + 1][1];
     }
 
     spriteA->oam.shape = 0; //square
@@ -997,8 +1003,7 @@ void ResetOamRange(u8 a, u8 b)
 
     for (i = a; i < b; i++)
     {
-        struct OamData *oamBuffer = gMain.oamBuffer;
-        oamBuffer[i] = *(struct OamData *)&gDummyOamData;
+        gMain.oamBuffer[i] = *(struct OamData *)&gDummyOamData;
     }
 }
 
@@ -1659,14 +1664,14 @@ void obj_update_pos2(struct Sprite *sprite, s32 a1, s32 a2)
         var0 = sOamDimensions32[sprite->oam.shape][sprite->oam.size].width;
         var1 = var0 << 8;
         var2 = (var0 << 16) / gOamMatrices[matrixNum].a;
-        sprite->pos2.x = sub_8007E28(var1, var2, a1);
+        sprite->x2 = sub_8007E28(var1, var2, a1);
     }
     if (a2 != 0x800)
     {
         var0 = sOamDimensions32[sprite->oam.shape][sprite->oam.size].height;
         var1 = var0 << 8;
         var2 = (var0 << 16) / gOamMatrices[matrixNum].d;
-        sprite->pos2.y = sub_8007E28(var1, var2, a2);
+        sprite->y2 = sub_8007E28(var1, var2, a2);
     }
 }
 
