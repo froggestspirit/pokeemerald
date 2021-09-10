@@ -372,6 +372,7 @@ static void HandleInputChooseTarget(void)
         BtlController_EmitTwoReturnValues(1, 10, gMoveSelectionCursor[gActiveBattler] | (gMultiUsePlayerCursor << 8));
         EndBounceEffect(gMultiUsePlayerCursor, BOUNCE_HEALTHBOX);
         PlayerBufferExecCompleted();
+        MoveSelectionDestroyCursorAt(gMoveSelectionCursor[gActiveBattler]);
     }
     else if (JOY_NEW(B_BUTTON) || gPlayerDpadHoldFrames > 59)
     {
@@ -529,6 +530,7 @@ static void HandleInputChooseMove(void)
         {
             BtlController_EmitTwoReturnValues(1, 10, gMoveSelectionCursor[gActiveBattler] | (gMultiUsePlayerCursor << 8));
             PlayerBufferExecCompleted();
+            MoveSelectionDestroyCursorAt(gMoveSelectionCursor[gActiveBattler]);
         }
         else
         {
