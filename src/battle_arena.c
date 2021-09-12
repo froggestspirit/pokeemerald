@@ -525,7 +525,7 @@ u8 BattleArena_ShowJudgmentWindow(u8 *state)
     case 1:
         if (!gPaletteFade.active)
         {
-            HandleBattleWindow(5, 0, 24, 13, 0);
+            HandleBattleWindowNew(5, 0, 24, 12, 0);
             (*state)++;
         }
         break;
@@ -612,7 +612,7 @@ u8 BattleArena_ShowJudgmentWindow(u8 *state)
         break;
     case 9:
         SetGpuReg(REG_OFFSET_WININ, WININ_WIN0_BG1 | WININ_WIN0_BG2 | WININ_WIN0_BG3 | WININ_WIN0_OBJ | WININ_WIN0_CLR | WININ_WIN1_BG_ALL | WININ_WIN1_OBJ | WININ_WIN1_CLR);
-        HandleBattleWindow(5, 0, 24, 13, WINDOW_CLEAR);
+        HandleBattleWindowNew(5, 0, 24, 12, WINDOW_CLEAR);
         CopyBgTilemapBufferToVram(0);
         m4aMPlayVolumeControl(&gMPlayInfo_BGM, 0xFFFF, 256);
         BeginNormalPaletteFade(0x7FFFFF1C, 4, 8, 0, RGB_BLACK);
