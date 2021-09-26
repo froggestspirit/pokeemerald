@@ -185,6 +185,78 @@ static void (*const sPlayerBufferCommands[CONTROLLER_CMDS_COUNT])(void) =
     [CONTROLLER_TERMINATOR_NOP]           = PlayerCmdEnd
 };
 
+static const u16 sTypeColorsDark[] =
+{
+    [TYPE_NONE] = RGB(25, 25, 25),
+    [TYPE_NORMAL] = RGB(13, 13, 7),
+    [TYPE_FIGHTING] = RGB(18, 1, 0),
+    [TYPE_FLYING] = RGB(13, 10, 28),
+    [TYPE_POISON] = RGB(12, 2, 12),
+    [TYPE_GROUND] = RGB(24, 18, 5),
+    [TYPE_ROCK] = RGB(16, 12, 1),
+    [TYPE_BUG] = RGB(13, 16, 0),
+    [TYPE_GHOST] = RGB(6, 3, 11),
+    [TYPE_STEEL] = RGB(16, 16, 21),
+    [TYPE_MYSTERY] = RGB(3, 3, 11),
+    [TYPE_FIRE] = RGB(28, 8, 1),
+    [TYPE_WATER] = RGB(5, 10, 28),
+    [TYPE_GRASS] = RGB(7, 19, 3),
+    [TYPE_ELECTRIC] = RGB(30, 21, 1),
+    [TYPE_PSYCHIC] = RGB(30, 3, 9),
+    [TYPE_ICE] = RGB(11, 22, 22),
+    [TYPE_DRAGON] = RGB(6, 1, 30),
+    [TYPE_DARK] = RGB(6, 3, 2),
+    //[TYPE_FAIRY] = RGB(28, 16, 17),
+};
+
+static const u16 sTypeColors[] =
+{
+    [TYPE_NONE] = RGB(27, 27, 27),
+    [TYPE_NORMAL] = RGB(21, 21, 15),
+    [TYPE_FIGHTING] = RGB(24, 6, 5),
+    [TYPE_FLYING] = RGB(21, 18, 30),
+    [TYPE_POISON] = RGB(20, 8, 20),
+    [TYPE_GROUND] = RGB(28, 24, 13),
+    [TYPE_ROCK] = RGB(23, 20, 7),
+    [TYPE_BUG] = RGB(21, 23, 4),
+    [TYPE_GHOST] = RGB(14, 11, 19),
+    [TYPE_STEEL] = RGB(23, 23, 26),
+    [TYPE_MYSTERY] = RGB(11, 11, 19),
+    [TYPE_FIRE] = RGB(30, 16, 6),
+    [TYPE_WATER] = RGB(13, 18, 30),
+    [TYPE_GRASS] = RGB(15, 25, 10),
+    [TYPE_ELECTRIC] = RGB(31, 26, 6),
+    [TYPE_PSYCHIC] = RGB(31, 11, 17),
+    [TYPE_ICE] = RGB(19, 27, 27),
+    [TYPE_DRAGON] = RGB(14, 7, 31),
+    [TYPE_DARK] = RGB(14, 11, 9),
+    //[TYPE_FAIRY] = RGB(30, 22, 23),
+};
+
+static const u16 sTypeColorsLight[] =
+{
+    [TYPE_NONE] = RGB(29, 29, 29),
+    [TYPE_NORMAL] = RGB(24, 24, 19),
+    [TYPE_FIGHTING] = RGB(26, 10, 9),
+    [TYPE_FLYING] = RGB(24, 21, 30),
+    [TYPE_POISON] = RGB(23, 12, 23),
+    [TYPE_GROUND] = RGB(29, 26, 17),
+    [TYPE_ROCK] = RGB(25, 23, 11),
+    [TYPE_BUG] = RGB(24, 25, 8),
+    [TYPE_GHOST] = RGB(18, 15, 22),
+    [TYPE_STEEL] = RGB(25, 25, 27),
+    [TYPE_MYSTERY] = RGB(15, 15, 22),
+    [TYPE_FIRE] = RGB(30, 20, 10),
+    [TYPE_WATER] = RGB(17, 21, 30),
+    [TYPE_GRASS] = RGB(19, 27, 14),
+    [TYPE_ELECTRIC] = RGB(31, 27, 10),
+    [TYPE_PSYCHIC] = RGB(31, 15, 21),
+    [TYPE_ICE] = RGB(22, 28, 28),
+    [TYPE_DRAGON] = RGB(18, 11, 31),
+    [TYPE_DARK] = RGB(18, 15, 13),
+    //[TYPE_FAIRY] = RGB(30, 25, 26),
+};
+
 static const u8 sTargetIdentities[MAX_BATTLERS_COUNT] = {B_POSITION_PLAYER_LEFT, B_POSITION_PLAYER_RIGHT, B_POSITION_OPPONENT_RIGHT, B_POSITION_OPPONENT_LEFT};
 
 // unknown unused data
@@ -1503,10 +1575,18 @@ static void MoveSelectionDisplayPpNumber(void)
 static void MoveSelectionDisplayMoveType(void)
 {
     struct ChooseMoveStruct *moveInfo = (struct ChooseMoveStruct*)(&gBattleBufferA[gActiveBattler][4]);
+    u8 type = gBattleMoves[moveInfo->moves[gMoveSelectionCursor[gActiveBattler]]].type;
+
     StringCopy(gDisplayedStringBattle, gText_MoveInterfacePP);
     StringAppend(gDisplayedStringBattle, newline);
-    StringAppend(gDisplayedStringBattle, gTypeNames[gBattleMoves[moveInfo->moves[gMoveSelectionCursor[gActiveBattler]]].type]);
+    StringAppend(gDisplayedStringBattle, gTypeNames[type]);
     BattlePutTextOnWindow(gDisplayedStringBattle, 7);
+    FillPalette(sTypeColorsDark[type], 10, 2);
+    CpuCopy16(gPlttBufferUnfaded + 10, (void*)(PLTT + (10 * 2)), 2);
+    FillPalette(sTypeColors[type], 11, 2);
+    CpuCopy16(gPlttBufferUnfaded + 11, (void*)(PLTT + (11 * 2)), 2);
+    FillPalette(sTypeColorsLight[type], 12, 2);
+    CpuCopy16(gPlttBufferUnfaded + 12, (void*)(PLTT + (12 * 2)), 2);
 }
 
 static void MoveSelectionCreateCursorAt(u8 cursorPosition, u8 arg1)
