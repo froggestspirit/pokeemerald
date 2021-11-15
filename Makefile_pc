@@ -6,7 +6,7 @@ AS := $(PREFIX)as
 ifeq ($(shell uname),Linux)
   CFLAGS := -m32 -fsanitize=undefined
   ASFLAGS := --defsym NO_UNDERSCORE_HACK=1
-  PLATFORM_LIBS := -lSDL2
+  PLATFORM_LIBS := -I/usr/include/SDL2 -D_REENTRANT -lSDL2 -Wl,--no-undefined -lasound -lm -ldl -lpthread -lpulse-simple -lpulse -lX11 -lXext -lXcursor -lXinerama -lXi -lXrandr -lXss -lXxf86vm -lwayland-egl -lwayland-client -lwayland-cursor -lxkbcommon -lpthread -lrt
 # Windows
 else
   PLATFORM_LIBS := -L$(SDL_DIR)/lib  -lmingw32 -lSDLmain -lSDL.dll -lwinmm

@@ -51,8 +51,8 @@ void cgb_set_sweep(u8 sweep){
 
 void cgb_set_wavram(){
     for(u8 wavi = 0; wavi < 0x10; wavi++){
-        gb.WAVRAM[(wavi << 1)] = -15 + (((*(REG_ADDR_WAVE_RAM0 + wavi)) & 0xF0) >> 3);
-        gb.WAVRAM[(wavi << 1) + 1] = -15 + (((*(REG_ADDR_WAVE_RAM0 + wavi)) & 0x0F) << 1);
+        gb.WAVRAM[(wavi << 1)] = (((*(REG_ADDR_WAVE_RAM0 + wavi)) & 0xF0) >> 4) / 7.5f - 1.0f;
+        gb.WAVRAM[(wavi << 1) + 1] = (((*(REG_ADDR_WAVE_RAM0 + wavi)) & 0x0F)) / 7.5f - 1.0f;
     }
 }
 
@@ -201,16 +201,16 @@ void cgb_audio_generate(u16 samplesPerFrame){
         float outputR = 0;
         if(REG_NR52 & 0x80){
             if((gb.DAC[0]) && (REG_NR52 & 0x01)){
-                if(REG_NR51 & 0x01) outputL += gb.Vol[0] * PU1Table[(int)(soundChannelPos[0])];
-                if(REG_NR51 & 0x10) outputR += gb.Vol[0] * PU1Table[(int)(soundChannelPos[0])];
+                if(REG_NR51 & 0x10) outputL += gb.Vol[0] * PU1Table[(int)(soundChannelPos[0])] / 15.0f;
+                if(REG_NR51 & 0x01) outputR += gb.Vol[0] * PU1Table[(int)(soundChannelPos[0])] / 15.0f;
             }
             if((gb.DAC[1]) && (REG_NR52 & 0x02)){
-                if(REG_NR51 & 0x02) outputL += gb.Vol[1] * PU2Table[(int)(soundChannelPos[1])];
-                if(REG_NR51 & 0x20) outputR += gb.Vol[1] * PU2Table[(int)(soundChannelPos[1])];
+                if(REG_NR51 & 0x20) outputL += gb.Vol[1] * PU2Table[(int)(soundChannelPos[1])] / 15.0f;
+                if(REG_NR51 & 0x02) outputR += gb.Vol[1] * PU2Table[(int)(soundChannelPos[1])] / 15.0f;
             }
             if((REG_NR30 & 0x80) && (REG_NR52 & 0x04)){
-                if(REG_NR51 & 0x04) outputL += (gb.Vol[2] / 4.0f) * gb.WAVRAM[(int)(soundChannelPos[2])];
-                if(REG_NR51 & 0x40) outputR += (gb.Vol[2] / 4.0f) * gb.WAVRAM[(int)(soundChannelPos[2])];
+                if(REG_NR51 & 0x40) outputL += gb.Vol[2] * gb.WAVRAM[(int)(soundChannelPos[2])] / 4.0f;
+                if(REG_NR51 & 0x04) outputR += gb.Vol[2] * gb.WAVRAM[(int)(soundChannelPos[2])] / 4.0f;
             }
             if((gb.DAC[3]) && (REG_NR52 & 0x08)){
                 bool8 lfsrMode = ((REG_NR43 & 0x08) == 8);
@@ -237,12 +237,12 @@ void cgb_audio_generate(u16 samplesPerFrame){
                     ch4Samples--;
                 }
                 if(avgDiv > 1) ch4Out /= avgDiv;
-                if(REG_NR51 & 0x08) outputL += gb.Vol[3] * ch4Out;
-                if(REG_NR51 & 0x80) outputR += gb.Vol[3] * ch4Out;
+                if(REG_NR51 & 0x80) outputL += gb.Vol[3] * ch4Out / 15.0f;
+                if(REG_NR51 & 0x08) outputR += gb.Vol[3] * ch4Out / 15.0f;
             }
         }
-        outBuffer[0] = outputL / 128.0f;
-        outBuffer[1] = outputR / 128.0f;
+        outBuffer[0] = outputL / 4.0f;
+        outBuffer[1] = outputR / 4.0f;
     }
 }
 
