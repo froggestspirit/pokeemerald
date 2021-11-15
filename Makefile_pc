@@ -2,7 +2,6 @@ PREFIX := i686-linux-gnu-
 OBJCOPY := $(PREFIX)objcopy
 CC := $(PREFIX)gcc
 AS := $(PREFIX)as
-
 # Native Linux build
 ifeq ($(shell uname),Linux)
   CFLAGS := -m32 -fsanitize=undefined
