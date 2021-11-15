@@ -34,8 +34,8 @@ void cgb_audio_init(u32 rate){
     PU1Table = PU0;
     PU2Table = PU0;
     sampleRate = rate;
-    gb.ch4LFSR[0] = 0xFFFF;
-    gb.ch4LFSR[1] = 0xFF;
+    gb.ch4LFSR[0] = 0x8000;
+    gb.ch4LFSR[1] = 0x80;
     lfsrMax[0] = 0x8000;
     lfsrMax[1] = 0x80;
     ch4Samples = 0.0f;
@@ -99,6 +99,10 @@ void cgb_trigger_note(u8 channel){
     gb.Vol[channel] = gb.VolI[channel];
     gb.Len[channel] = gb.LenI[channel];
     if(channel != 2) gb.EnvCounter[channel] = gb.EnvCounterI[channel];
+    if(channel == 3) {
+        gb.ch4LFSR[0] = 0x8000;
+        gb.ch4LFSR[1] = 0x80;
+    }
 }
 
 
@@ -213,15 +217,15 @@ void cgb_audio_generate(u16 samplesPerFrame){
                 if(REG_NR51 & 0x04) outputR += gb.Vol[2] * gb.WAVRAM[(int)(soundChannelPos[2])] / 4.0f;
             }
             if((gb.DAC[3]) && (REG_NR52 & 0x08)){
-                bool8 lfsrMode = ((REG_NR43 & 0x08) == 8);
+                bool32 lfsrMode = !!(REG_NR43 & 0x08);
                 ch4Samples += freqTableNSE[REG_SOUND4CNT_H & 0xFF] / sampleRate;
-                float ch4Out = 0.0f;
+                int ch4Out = 0;
                 if(gb.ch4LFSR[lfsrMode] & 1){
                     ch4Out++;
                 }else{
                     ch4Out--;
                 }
-                float avgDiv = 1;
+                int avgDiv = 1;
                 while(ch4Samples >= 1){
                     avgDiv++;
                     bool8 lfsrCarry = 0;
@@ -236,9 +240,10 @@ void cgb_audio_generate(u16 samplesPerFrame){
                     }
                     ch4Samples--;
                 }
-                if(avgDiv > 1) ch4Out /= avgDiv;
-                if(REG_NR51 & 0x80) outputL += gb.Vol[3] * ch4Out / 15.0f;
-                if(REG_NR51 & 0x08) outputR += gb.Vol[3] * ch4Out / 15.0f;
+                float sample = ch4Out;
+                if(avgDiv > 1) sample /= avgDiv;
+                if(REG_NR51 & 0x80) outputL += (gb.Vol[3] * sample) / 15.0f;
+                if(REG_NR51 & 0x08) outputR += (gb.Vol[3] * sample) / 15.0f;
             }
         }
         outBuffer[0] = outputL / 4.0f;
