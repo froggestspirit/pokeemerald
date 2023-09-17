@@ -8,9 +8,9 @@ voicegroup000::
 	voice_keysplit voicegroupG4_05, keysplitTableG4_05
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_keysplit voicegroupG4_07, keysplitTableG4_07
-	voice_square_2 60, 0, 2, 0, 0, 9, 2
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_keysplit voicegroupG4_09, keysplitTableG4_09
-	voice_square_1 60, 0, 0, 2, 255, 247, 148, 221
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_keysplit voicegroupG4_0B, keysplitTableG4_0B
 	voice_keysplit voicegroupG4_0C, keysplitTableG4_0C
 	voice_keysplit voicegroupG4_0D, keysplitTableG4_0D
@@ -19,22 +19,22 @@ voicegroup000::
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_keysplit voicegroupG4_11, keysplitTableG4_11
 	voice_keysplit voicegroupG4_12, keysplitTableG4_12
-	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_55, 255, 186, 255, 210
+	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_55, 255, 186, 237, 210
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_keysplit voicegroupG4_15, keysplitTableG4_15
-	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_37, 84, 251, 249, 210
+	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_37, 84, 251, 193, 210
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_keysplit voicegroupG4_18, keysplitTableG4_18
-	voice_directsound 57, 0, DirectSoundWaveData_DP_Basic_0F, 255, 255, 254, 230
+	voice_directsound 57, 0, DirectSoundWaveData_DP_Basic_0F, 255, 255, 229, 230
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_keysplit voicegroupG4_1B, keysplitTableG4_1B
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_keysplit voicegroupG4_1D, keysplitTableG4_1D
 	voice_keysplit voicegroupG4_1E, keysplitTableG4_1E
-	voice_square_1 60, 0, 0, 2, 255, 247, 121, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_keysplit voicegroupG4_20, keysplitTableG4_20
-	voice_directsound 28, 0, DirectSoundWaveData_DP_Basic_69, 255, 254, 3, 230
-	voice_directsound 28, 0, DirectSoundWaveData_DP_Basic_59, 255, 254, 3, 230
+	voice_directsound 28, 0, DirectSoundWaveData_DP_Basic_69, 255, 254, 0, 230
+	voice_directsound 28, 0, DirectSoundWaveData_DP_Basic_59, 255, 254, 0, 230
 	voice_directsound 38, 0, DirectSoundWaveData_DP_Basic_33, 255, 0, 255, 221
 	voice_directsound 31, 0, DirectSoundWaveData_DP_Basic_65, 255, 0, 255, 238
 	voice_directsound 36, 0, DirectSoundWaveData_DP_Basic_64, 255, 0, 255, 234
@@ -42,8 +42,8 @@ voicegroup000::
 	voice_directsound 36, 0, DirectSoundWaveData_DP_Basic_7A, 255, 0, 255, 238
 	voice_keysplit voicegroupG4_28, keysplitTableG4_28
 	voice_directsound 67, 0, DirectSoundWaveData_DP_Basic_48, 255, 240, 255, 232
-	voice_square_1 60, 0, 0, 2, 255, 255, 0, 62
-	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_40, 42, 247, 240, 240
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_40, 42, 247, 157, 240
 	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_2D, 42, 255, 0, 253
 	voice_keysplit voicegroupG4_2D, keysplitTableG4_2D
 	voice_keysplit voicegroupG4_2E, keysplitTableG4_2E
@@ -52,7 +52,7 @@ voicegroup000::
 	voice_directsound 61, 0, DirectSoundWaveData_DP_Basic_4B, 255, 210, 255, 221
 	voice_directsound 59, 0, DirectSoundWaveData_DP_Basic_4C, 255, 210, 255, 240
 	voice_keysplit voicegroupG4_33, keysplitTableG4_33
-	voice_square_1 60, 0, 0, 2, 255, 254, 0, 240
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_5E, 255, 254, 0, 210
 	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_11, 255, 0, 255, 0
 	voice_directsound 48, 0, DirectSoundWaveData_DP_Basic_4A, 255, 210, 255, 238
@@ -62,19 +62,19 @@ voicegroup000::
 	voice_keysplit voicegroupG4_3B, keysplitTableG4_3B
 	voice_keysplit voicegroupG4_3C, keysplitTableG4_3C
 	voice_keysplit voicegroupG4_3D, keysplitTableG4_3D
-	voice_square_1 60, 0, 0, 2, 255, 247, 213, 240
-	voice_square_1 60, 0, 0, 2, 255, 247, 213, 240
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_directsound 36, 0, DirectSoundWaveData_DP_Basic_7B, 255, 62, 255, 234
-	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_0A, 255, 226, 255, 221
+	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_0A, 255, 226, 253, 221
 	voice_keysplit voicegroupG4_42, keysplitTableG4_42
-	voice_square_1 60, 0, 0, 2, 255, 247, 213, 240
-	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_47, 255, 247, 229, 234
-	voice_square_2 60, 0, 2, 0, 0, 9, 2
-	voice_square_1 60, 0, 0, 2, 36, 0, 213, 240
-	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_78, 255, 247, 241, 234
-	voice_square_1 60, 0, 0, 2, 255, 247, 213, 210
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_47, 255, 247, 129, 234
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_78, 255, 247, 159, 234
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_keysplit voicegroupG4_49, keysplitTableG4_49
-	voice_directsound 84, 0, DirectSoundWaveData_DP_Basic_9D, 127, 251, 194, 186
+	voice_directsound 84, 0, DirectSoundWaveData_DP_Basic_9D, 127, 251, 78, 186
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
 	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
@@ -82,47 +82,47 @@ voicegroup000::
 
 	.align 2
 voicegroupG4_01::
-	voice_square_1 0, 0, 0, 2, 255, 0, 255, 0
-	voice_square_1 1, 0, 0, 2, 255, 0, 255, 0
-	voice_square_1 2, 0, 0, 2, 255, 0, 255, 0
-	voice_square_1 3, 0, 0, 2, 255, 0, 255, 0
-	voice_square_1 4, 0, 0, 2, 255, 0, 255, 0
-	voice_square_1 5, 0, 0, 2, 255, 0, 255, 0
-	voice_square_1 6, 0, 0, 2, 255, 0, 255, 0
-	voice_square_1 7, 0, 0, 2, 255, 0, 255, 0
-	voice_square_1 8, 0, 0, 2, 255, 0, 255, 0
-	voice_square_1 9, 0, 0, 2, 255, 0, 255, 0
-	voice_square_1 10, 0, 0, 2, 255, 0, 255, 0
-	voice_square_1 11, 0, 0, 2, 255, 0, 255, 0
-	voice_square_1 12, 0, 0, 2, 255, 0, 255, 0
-	voice_square_1 13, 0, 0, 2, 255, 0, 255, 0
-	voice_square_1 14, 0, 0, 2, 255, 0, 255, 0
-	voice_square_1 15, 0, 0, 2, 255, 0, 255, 0
-	voice_square_1 16, 0, 0, 2, 255, 0, 255, 0
-	voice_square_1 17, 0, 0, 2, 255, 0, 255, 0
-	voice_square_1 18, 0, 0, 2, 255, 0, 255, 0
-	voice_square_1 19, 0, 0, 2, 255, 0, 255, 0
-	voice_square_1 20, 0, 0, 2, 255, 0, 255, 0
-	voice_square_1 21, 0, 0, 2, 255, 0, 255, 0
-	voice_square_1 22, 0, 0, 2, 255, 0, 255, 0
-	voice_square_1 23, 0, 0, 2, 255, 0, 255, 0
-	voice_square_1 24, 0, 0, 2, 255, 0, 255, 0
-	voice_square_1 25, 0, 0, 2, 255, 0, 255, 0
-	voice_square_1 26, 0, 0, 2, 255, 0, 255, 0
-	voice_square_1 27, 0, 0, 2, 255, 0, 255, 0
-	voice_square_1 28, 0, 0, 2, 255, 0, 255, 0
-	voice_directsound 60, 0, DirectSoundWaveData_GS_Basic_38, 255, 0, 254, 210
-	voice_directsound 60, 0, DirectSoundWaveData_GS_Basic_6E, 255, 255, 249, 210
-	voice_directsound 60, 0, DirectSoundWaveData_GS_Basic_68, 1, 0, 254, 210
-	voice_directsound 60, 0, DirectSoundWaveData_GS_Basic_07, 255, 0, 254, 210
-	voice_directsound 61, 0, DirectSoundWaveData_GS_Basic_07, 255, 0, 254, 210
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_square_1 60, 0, 0, 2, 0, 0, 15, 0
+	voice_directsound 60, 0, DirectSoundWaveData_GS_Basic_38, 255, 0, 229, 210
+	voice_directsound 60, 0, DirectSoundWaveData_GS_Basic_6E, 255, 255, 193, 210
+	voice_directsound 60, 0, DirectSoundWaveData_GS_Basic_68, 1, 0, 229, 210
+	voice_directsound 60, 0, DirectSoundWaveData_GS_Basic_07, 255, 0, 229, 210
+	voice_directsound 61, 0, DirectSoundWaveData_GS_Basic_07, 255, 0, 229, 210
 	voice_directsound 60, 0, DirectSoundWaveData_GS_Basic_6F, 255, 230, 0, 210
 	voice_directsound 60, 0, DirectSoundWaveData_GS_Basic_08, 255, 0, 255, 210
-	voice_directsound 60, 0, DirectSoundWaveData_GS_Basic_09, 255, 0, 254, 210
+	voice_directsound 60, 0, DirectSoundWaveData_GS_Basic_09, 255, 0, 229, 210
 	voice_directsound 61, 0, DirectSoundWaveData_GS_Basic_6B, 255, 230, 0, 210
 	voice_directsound 60, 0, DirectSoundWaveData_GS_Basic_70, 255, 0, 255, 210
-	voice_directsound 60, 0, DirectSoundWaveData_GS_Basic_39, 255, 0, 254, 210
-	voice_directsound 60, 0, DirectSoundWaveData_GS_Basic_71, 255, 234, 229, 210
+	voice_directsound 60, 0, DirectSoundWaveData_GS_Basic_39, 255, 0, 229, 210
+	voice_directsound 60, 0, DirectSoundWaveData_GS_Basic_71, 255, 234, 129, 210
 	voice_directsound 60, 0, DirectSoundWaveData_GS_Basic_87, 255, 0, 255, 210
 	voice_directsound 60, 0, DirectSoundWaveData_GS_Basic_3E, 255, 247, 0, 210
 	voice_directsound 60, 0, DirectSoundWaveData_GS_Basic_89, 255, 0, 255, 210
@@ -149,7 +149,7 @@ voicegroupG4_01::
 	voice_directsound 57, 0, DirectSoundWaveData_GS_Basic_3D, 255, 0, 255, 210
 	voice_directsound 58, 0, DirectSoundWaveData_GS_Basic_3D, 255, 0, 255, 210
 	voice_directsound 59, 0, DirectSoundWaveData_GS_Basic_3D, 255, 0, 255, 210
-	voice_directsound 60, 0, DirectSoundWaveData_GS_Basic_12, 255, 247, 229, 210
+	voice_directsound 60, 0, DirectSoundWaveData_GS_Basic_12, 255, 247, 129, 210
 	voice_directsound 60, 0, DirectSoundWaveData_GS_Basic_4A, 255, 0, 255, 210
 	voice_directsound 60, 0, DirectSoundWaveData_GS_Basic_3D, 255, 0, 255, 210
 	voice_directsound 63, 0, DirectSoundWaveData_GS_Basic_3D, 255, 0, 255, 210
@@ -158,28 +158,28 @@ voicegroupG4_01::
 	voice_directsound 66, 0, DirectSoundWaveData_GS_Basic_3D, 255, 0, 255, 210
 	voice_directsound 67, 0, DirectSoundWaveData_GS_Basic_3D, 255, 0, 255, 210
 	voice_directsound 68, 0, DirectSoundWaveData_GS_Basic_3D, 255, 0, 255, 210
-	voice_directsound 60, 0, DirectSoundWaveData_GS_Basic_6C, 255, 247, 229, 210
-	voice_directsound 61, 0, DirectSoundWaveData_GS_Basic_6C, 255, 247, 229, 210
-	voice_directsound 60, 0, DirectSoundWaveData_GS_Basic_6C, 255, 247, 229, 210
-	voice_directsound 61, 0, DirectSoundWaveData_GS_Basic_6C, 255, 247, 229, 210
+	voice_directsound 60, 0, DirectSoundWaveData_GS_Basic_6C, 255, 247, 129, 210
+	voice_directsound 61, 0, DirectSoundWaveData_GS_Basic_6C, 255, 247, 129, 210
+	voice_directsound 60, 0, DirectSoundWaveData_GS_Basic_6C, 255, 247, 129, 210
+	voice_directsound 61, 0, DirectSoundWaveData_GS_Basic_6C, 255, 247, 129, 210
 	voice_directsound 60, 0, DirectSoundWaveData_GS_Basic_8B, 255, 210, 0, 62
 	voice_directsound 60, 0, DirectSoundWaveData_GS_Basic_8B, 255, 253, 0, 221
 
 	.align 2
 voicegroupG4_02::
-	voice_directsound 43, 0, DirectSoundWaveData_DP_Basic_76, 255, 254, 3, 240
-	voice_directsound 48, 0, DirectSoundWaveData_DP_Basic_70, 255, 254, 3, 240
-	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_71, 255, 254, 3, 230
-	voice_directsound 67, 0, DirectSoundWaveData_DP_Basic_77, 255, 253, 3, 230
-	voice_directsound 72, 0, DirectSoundWaveData_DP_Basic_72, 255, 253, 3, 230
-	voice_directsound 77, 0, DirectSoundWaveData_DP_Basic_75, 255, 251, 3, 230
-	voice_directsound 84, 0, DirectSoundWaveData_DP_Basic_73, 255, 251, 3, 230
-	voice_directsound 96, 0, DirectSoundWaveData_DP_Basic_74, 255, 251, 3, 230
+	voice_directsound 43, 0, DirectSoundWaveData_DP_Basic_76, 255, 254, 0, 240
+	voice_directsound 48, 0, DirectSoundWaveData_DP_Basic_70, 255, 254, 0, 240
+	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_71, 255, 254, 0, 230
+	voice_directsound 67, 0, DirectSoundWaveData_DP_Basic_77, 255, 253, 0, 230
+	voice_directsound 72, 0, DirectSoundWaveData_DP_Basic_72, 255, 253, 0, 230
+	voice_directsound 77, 0, DirectSoundWaveData_DP_Basic_75, 255, 251, 0, 230
+	voice_directsound 84, 0, DirectSoundWaveData_DP_Basic_73, 255, 251, 0, 230
+	voice_directsound 96, 0, DirectSoundWaveData_DP_Basic_74, 255, 251, 0, 230
 
 	.align 2
 voicegroupG4_03::
-	voice_directsound 24, 0, DirectSoundWaveData_DP_Basic_6E, 255, 254, 3, 242
-	voice_directsound 36, 0, DirectSoundWaveData_DP_Basic_6F, 255, 254, 3, 240
+	voice_directsound 24, 0, DirectSoundWaveData_DP_Basic_6E, 255, 254, 0, 242
+	voice_directsound 36, 0, DirectSoundWaveData_DP_Basic_6F, 255, 254, 0, 240
 
 	.align 2
 voicegroupG4_04::
@@ -193,9 +193,9 @@ voicegroupG4_05::
 
 	.align 2
 voicegroupG4_07::
-	voice_directsound 36, 0, DirectSoundWaveData_DP_Basic_16, 255, 254, 3, 14
-	voice_directsound 48, 0, DirectSoundWaveData_DP_Basic_17, 255, 254, 3, 14
-	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_18, 255, 254, 3, 14
+	voice_directsound 36, 0, DirectSoundWaveData_DP_Basic_16, 255, 254, 0, 14
+	voice_directsound 48, 0, DirectSoundWaveData_DP_Basic_17, 255, 254, 0, 14
+	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_18, 255, 254, 0, 14
 
 	.align 2
 voicegroupG4_09::
@@ -218,11 +218,11 @@ voicegroupG4_0C::
 
 	.align 2
 voicegroupG4_0D::
-	voice_directsound 48, 0, DirectSoundWaveData_DP_Basic_9E, 255, 253, 121, 221
-	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_9F, 255, 253, 121, 221
-	voice_directsound 72, 0, DirectSoundWaveData_DP_Basic_A0, 255, 253, 172, 221
-	voice_directsound 84, 0, DirectSoundWaveData_DP_Basic_A1, 255, 253, 172, 221
-	voice_directsound 96, 0, DirectSoundWaveData_DP_Basic_A2, 255, 251, 121, 221
+	voice_directsound 48, 0, DirectSoundWaveData_DP_Basic_9E, 255, 253, 26, 221
+	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_9F, 255, 253, 26, 221
+	voice_directsound 72, 0, DirectSoundWaveData_DP_Basic_A0, 255, 253, 58, 221
+	voice_directsound 84, 0, DirectSoundWaveData_DP_Basic_A1, 255, 253, 58, 221
+	voice_directsound 96, 0, DirectSoundWaveData_DP_Basic_A2, 255, 251, 26, 221
 
 	.align 2
 voicegroupG4_0E::
@@ -234,7 +234,7 @@ voicegroupG4_0E::
 	.align 2
 voicegroupG4_11::
 	voice_directsound 48, 0, DirectSoundWaveData_DP_Basic_4F, 255, 0, 255, 230
-	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_50, 255, 210, 254, 230
+	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_50, 255, 210, 229, 230
 	voice_directsound 72, 0, DirectSoundWaveData_DP_Basic_51, 255, 0, 255, 230
 	voice_directsound 84, 0, DirectSoundWaveData_DP_Basic_52, 255, 0, 255, 230
 
@@ -247,15 +247,15 @@ voicegroupG4_12::
 voicegroupG4_15::
 	voice_directsound 36, 0, DirectSoundWaveData_DP_Basic_01, 255, 0, 255, 221
 	voice_directsound 48, 0, DirectSoundWaveData_DP_Basic_02, 255, 0, 255, 221
-	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_03, 127, 210, 253, 221
-	voice_directsound 72, 0, DirectSoundWaveData_DP_Basic_04, 127, 210, 249, 221
+	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_03, 127, 210, 219, 221
+	voice_directsound 72, 0, DirectSoundWaveData_DP_Basic_04, 127, 210, 193, 221
 
 	.align 2
 voicegroupG4_18::
-	voice_directsound 40, 0, DirectSoundWaveData_DP_Basic_05, 255, 255, 229, 230
-	voice_directsound 52, 0, DirectSoundWaveData_DP_Basic_06, 255, 255, 229, 230
-	voice_directsound 64, 0, DirectSoundWaveData_DP_Basic_07, 255, 255, 229, 230
-	voice_directsound 76, 0, DirectSoundWaveData_DP_Basic_08, 255, 255, 229, 230
+	voice_directsound 40, 0, DirectSoundWaveData_DP_Basic_05, 255, 255, 129, 230
+	voice_directsound 52, 0, DirectSoundWaveData_DP_Basic_06, 255, 255, 129, 230
+	voice_directsound 64, 0, DirectSoundWaveData_DP_Basic_07, 255, 255, 129, 230
+	voice_directsound 76, 0, DirectSoundWaveData_DP_Basic_08, 255, 255, 129, 230
 
 	.align 2
 voicegroupG4_1B::
@@ -265,86 +265,86 @@ voicegroupG4_1B::
 
 	.align 2
 voicegroupG4_1D::
-	voice_directsound 40, 0, DirectSoundWaveData_DP_Basic_25, 255, 255, 3, 14
-	voice_directsound 48, 0, DirectSoundWaveData_DP_Basic_24, 255, 255, 3, 14
-	voice_directsound 64, 0, DirectSoundWaveData_DP_Basic_26, 255, 255, 3, 14
-	voice_directsound 76, 0, DirectSoundWaveData_DP_Basic_27, 255, 255, 3, 14
-	voice_directsound 83, 0, DirectSoundWaveData_DP_Basic_23, 255, 255, 3, 14
+	voice_directsound 40, 0, DirectSoundWaveData_DP_Basic_25, 255, 255, 0, 14
+	voice_directsound 48, 0, DirectSoundWaveData_DP_Basic_24, 255, 255, 0, 14
+	voice_directsound 64, 0, DirectSoundWaveData_DP_Basic_26, 255, 255, 0, 14
+	voice_directsound 76, 0, DirectSoundWaveData_DP_Basic_27, 255, 255, 0, 14
+	voice_directsound 83, 0, DirectSoundWaveData_DP_Basic_23, 255, 255, 0, 14
 
 	.align 2
 voicegroupG4_1E::
-	voice_directsound 40, 0, DirectSoundWaveData_DP_Basic_5B, 255, 254, 229, 14
-	voice_directsound 47, 0, DirectSoundWaveData_DP_Basic_5A, 255, 254, 229, 14
-	voice_directsound 52, 0, DirectSoundWaveData_DP_Basic_5C, 255, 254, 229, 14
+	voice_directsound 40, 0, DirectSoundWaveData_DP_Basic_5B, 255, 254, 129, 14
+	voice_directsound 47, 0, DirectSoundWaveData_DP_Basic_5A, 255, 254, 129, 14
+	voice_directsound 52, 0, DirectSoundWaveData_DP_Basic_5C, 255, 254, 129, 14
 
 	.align 2
 voicegroupG4_20::
-	voice_directsound 31, 0, DirectSoundWaveData_DP_Basic_9A, 255, 254, 3, 221
-	voice_directsound 44, 0, DirectSoundWaveData_DP_Basic_9B, 255, 254, 3, 210
-	voice_directsound 50, 0, DirectSoundWaveData_DP_Basic_99, 255, 254, 3, 210
+	voice_directsound 31, 0, DirectSoundWaveData_DP_Basic_9A, 255, 254, 0, 221
+	voice_directsound 44, 0, DirectSoundWaveData_DP_Basic_9B, 255, 254, 0, 210
+	voice_directsound 50, 0, DirectSoundWaveData_DP_Basic_99, 255, 254, 0, 210
 
 	.align 2
 voicegroupG4_28::
 	voice_directsound 36, 0, DirectSoundWaveData_DP_Basic_94, 127, 247, 255, 230
 	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_95, 127, 251, 255, 230
-	voice_directsound 72, 0, DirectSoundWaveData_DP_Basic_96, 84, 251, 223, 230
-	voice_directsound 84, 0, DirectSoundWaveData_DP_Basic_97, 50, 251, 194, 230
+	voice_directsound 72, 0, DirectSoundWaveData_DP_Basic_96, 84, 251, 118, 230
+	voice_directsound 84, 0, DirectSoundWaveData_DP_Basic_97, 50, 251, 78, 230
 
 	.align 2
 voicegroupG4_2D::
-	voice_directsound 67, 0, DirectSoundWaveData_DP_Basic_57, 255, 240, 241, 221
-	voice_directsound 79, 0, DirectSoundWaveData_DP_Basic_58, 255, 234, 241, 217
+	voice_directsound 67, 0, DirectSoundWaveData_DP_Basic_57, 255, 240, 159, 221
+	voice_directsound 79, 0, DirectSoundWaveData_DP_Basic_58, 255, 234, 159, 217
 
 	.align 2
 voicegroupG4_2E::
-	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_38, 255, 253, 3, 230
-	voice_directsound 72, 0, DirectSoundWaveData_DP_Basic_39, 255, 251, 3, 230
-	voice_directsound 84, 0, DirectSoundWaveData_DP_Basic_3A, 255, 247, 3, 230
-	voice_directsound 96, 0, DirectSoundWaveData_DP_Basic_3B, 255, 240, 3, 221
+	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_38, 255, 253, 0, 230
+	voice_directsound 72, 0, DirectSoundWaveData_DP_Basic_39, 255, 251, 0, 230
+	voice_directsound 84, 0, DirectSoundWaveData_DP_Basic_3A, 255, 247, 0, 230
+	voice_directsound 96, 0, DirectSoundWaveData_DP_Basic_3B, 255, 240, 0, 221
 
 	.align 2
 voicegroupG4_2F::
-	voice_directsound 41, 0, DirectSoundWaveData_DP_Basic_7E, 255, 253, 3, 230
-	voice_directsound 46, 0, DirectSoundWaveData_DP_Basic_7D, 255, 253, 3, 230
+	voice_directsound 41, 0, DirectSoundWaveData_DP_Basic_7E, 255, 253, 0, 230
+	voice_directsound 46, 0, DirectSoundWaveData_DP_Basic_7D, 255, 253, 0, 230
 
 	.align 2
 voicegroupG4_30::
-	voice_directsound 36, 0, DirectSoundWaveData_DP_Basic_6A, 255, 247, 254, 230
-	voice_directsound 48, 0, DirectSoundWaveData_DP_Basic_6B, 255, 245, 249, 230
-	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_6C, 254, 240, 241, 230
-	voice_directsound 72, 0, DirectSoundWaveData_DP_Basic_6D, 254, 232, 229, 230
+	voice_directsound 36, 0, DirectSoundWaveData_DP_Basic_6A, 255, 247, 229, 230
+	voice_directsound 48, 0, DirectSoundWaveData_DP_Basic_6B, 255, 245, 193, 230
+	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_6C, 254, 240, 159, 230
+	voice_directsound 72, 0, DirectSoundWaveData_DP_Basic_6D, 254, 232, 129, 230
 
 	.align 2
 voicegroupG4_33::
-	voice_directsound 48, 0, DirectSoundWaveData_DP_Basic_44, 255, 254, 3, 232
-	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_45, 255, 254, 3, 232
+	voice_directsound 48, 0, DirectSoundWaveData_DP_Basic_44, 255, 254, 0, 232
+	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_45, 255, 254, 0, 232
 
 	.align 2
 voicegroupG4_38::
-	voice_directsound 61, 0, DirectSoundWaveData_DP_Basic_82, 255, 247, 213, 230
-	voice_directsound 73, 0, DirectSoundWaveData_DP_Basic_83, 255, 247, 213, 230
-	voice_directsound 83, 0, DirectSoundWaveData_DP_Basic_81, 255, 240, 213, 230
+	voice_directsound 61, 0, DirectSoundWaveData_DP_Basic_82, 255, 247, 102, 230
+	voice_directsound 73, 0, DirectSoundWaveData_DP_Basic_83, 255, 247, 102, 230
+	voice_directsound 83, 0, DirectSoundWaveData_DP_Basic_81, 255, 240, 102, 230
 
 	.align 2
 voicegroupG4_39::
-	voice_directsound 48, 0, DirectSoundWaveData_DP_Basic_85, 255, 247, 241, 230
-	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_86, 255, 247, 241, 230
-	voice_directsound 72, 0, DirectSoundWaveData_DP_Basic_87, 255, 247, 241, 230
+	voice_directsound 48, 0, DirectSoundWaveData_DP_Basic_85, 255, 247, 159, 230
+	voice_directsound 60, 0, DirectSoundWaveData_DP_Basic_86, 255, 247, 159, 230
+	voice_directsound 72, 0, DirectSoundWaveData_DP_Basic_87, 255, 247, 159, 230
 
 	.align 2
 voicegroupG4_3A::
-	voice_directsound 36, 0, DirectSoundWaveData_DP_Basic_8C, 255, 0, 255, 221
-	voice_directsound 48, 0, DirectSoundWaveData_DP_Basic_8D, 255, 0, 255, 221
+	voice_directsound 36, 0, DirectSoundWaveData_DP_Basic_8C, 255, 0, 253, 221
+	voice_directsound 48, 0, DirectSoundWaveData_DP_Basic_8D, 255, 0, 253, 221
 
 	.align 2
 voicegroupG4_3B::
-	voice_directsound 61, 0, DirectSoundWaveData_DP_Basic_82, 255, 247, 249, 230
-	voice_directsound 73, 0, DirectSoundWaveData_DP_Basic_83, 255, 247, 249, 230
-	voice_directsound 83, 0, DirectSoundWaveData_DP_Basic_81, 255, 240, 249, 230
+	voice_directsound 61, 0, DirectSoundWaveData_DP_Basic_82, 255, 247, 193, 230
+	voice_directsound 73, 0, DirectSoundWaveData_DP_Basic_83, 255, 247, 193, 230
+	voice_directsound 83, 0, DirectSoundWaveData_DP_Basic_81, 255, 240, 193, 230
 
 	.align 2
 voicegroupG4_3C::
-	voice_directsound 48, 0, DirectSoundWaveData_DP_Basic_2E, 84, 226, 253, 230
+	voice_directsound 48, 0, DirectSoundWaveData_DP_Basic_2E, 84, 226, 221, 230
 	voice_directsound 72, 0, DirectSoundWaveData_DP_Basic_2F, 255, 226, 255, 230
 
 	.align 2
@@ -362,13 +362,13 @@ voicegroupG4_42::
 
 	.align 2
 voicegroupG4_49::
-	voice_directsound 72, 0, DirectSoundWaveData_DP_Basic_30, 255, 251, 241, 221
-	voice_directsound 84, 0, DirectSoundWaveData_DP_Basic_31, 255, 251, 229, 221
-	voice_directsound 96, 0, DirectSoundWaveData_DP_Basic_32, 255, 251, 188, 221
+	voice_directsound 72, 0, DirectSoundWaveData_DP_Basic_30, 255, 251, 159, 221
+	voice_directsound 84, 0, DirectSoundWaveData_DP_Basic_31, 255, 251, 129, 221
+	voice_directsound 96, 0, DirectSoundWaveData_DP_Basic_32, 255, 251, 71, 221
 
 	.align 2
 voicegroupG4_4E::
-	voice_directsound 84, 0, DirectSoundWaveData_DP_Basic_98, 255, 251, 194, 221
+	voice_directsound 84, 0, DirectSoundWaveData_DP_Basic_98, 255, 251, 78, 221
 
 .set keysplitTableG4_02, . - 0
 	.byte 0  @ 0
